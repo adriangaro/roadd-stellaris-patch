@@ -1,0 +1,190 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+
+# Eco-Arcology Project
+decision_ecoarcology_project = {	
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Eco-Arcology Project (Relic Worlds)
+decision_ecoarcology_project_relic = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Military Arcology Project
+decision_milarcology_project = {	
+	potential = {
+		always = no
+	}
+
+	allow = {
+		
+		always = no
+	}
+
+	effect = {}
+}
+
+# Milarc Project (Milarc Relic Worlds)
+decision_milarc_project_relic = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Milarc Project (Regular Relic Worlds)
+decision_milarc_project_regrelic = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Corpo-Arc Project
+decision_corpoarcology_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Corpo-Arc Project (Relic Worlds)
+decision_corpoarcology_project_relic = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+
+# Bio-Forge Project
+decision_bioforge_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Bio-Fort Project
+decision_biofort_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Flora-Forge Project
+decision_floraforge_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Flora-Fort Project
+decision_florafort_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Machine Factory Project
+decision_machinefactory_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+# Machine Fort Project
+decision_machine_fort_project = {
+	potential = {
+		always = no
+	}
+	
+	allow = {
+		
+		always = no
+	}
+	
+	effect = {}
+}
+
+
+

@@ -1,0 +1,296 @@
+# Entrepeneur forge
+building_tec_entepre_forge = {
+	base_buildtime = @b1_time
+	position_priority = 5		# Civic buildings
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { 
+			is_capitalism = yes
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			owner = { 
+				is_capitalism = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_half_minerals
+		}
+		upkeep = {
+			energy = @b1_half_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_tec_hired_foundry_add = @b1_jobs
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				is_catalytic_empire = no 
+			}
+		}
+		text = job_tec_hired_foundry_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes 
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_tec_hired_catalytic_add = @b1_jobs
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_regular_empire = yes
+				is_catalytic_empire = yes 
+			}
+		}
+		text = job_tec_hired_catalytic_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 1
+	}
+}
+
+# Entrepeneur cg
+building_tec_entepre_factory = {
+	base_buildtime = @b1_time
+	position_priority = 5		# Civic buildings
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { 
+			is_capitalism = yes
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			owner = { 
+				is_capitalism = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_half_minerals
+		}
+		upkeep = {
+			energy = @b1_half_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_tec_hired_artisan_add = @b1_jobs
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_tec_hired_artisan_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		consumer_goods = 1
+	}
+}
+
+# Entrepeneur research
+building_tec_entepre_research = {
+	base_buildtime = @b1_time
+	position_priority = 5		# Civic buildings
+
+	category = research
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { 
+			is_capitalism = yes
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			owner = { 
+				is_capitalism = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_half_minerals
+		}
+		upkeep = {
+			energy = @b1_half_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_tec_hired_researcher_add = @b1_jobs
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_tec_hired_researcher_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 1
+		society_research = 1
+		engineering_research = 1
+	}
+}
+
+# Entrepeneur entertainment
+building_tec_entepre_theatres = {
+	base_buildtime = @b1_time
+	position_priority = 5		# Civic
+	category = amenity
+
+	potential = {
+		NOT = {	has_modifier = slave_colony	}
+		owner = { 
+			is_capitalism = yes
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { 
+				is_capitalism = no
+			}
+			has_modifier = slave_colony
+			AND = {
+				free_building_slots = 0
+				owner = { is_ai = yes }
+				OR = {
+					free_amenities > 30
+					AND = {
+						count_owned_pop = { limit = { is_sapient = yes }count < 75 }
+						owner = {
+							has_technology = tech_frontier_health
+						}
+						NOR = {
+							has_building = building_clinic
+							has_building = building_hospital
+						}
+					}
+					AND = {
+						owner = {
+							NOT = { has_policy_flag = robots_outlawed }
+							has_technology = tech_robotic_workers
+						}
+						NOT = { has_building = building_robot_assembly_plant }
+					}
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_half_minerals
+		}
+		upkeep = {
+			energy = @b1_half_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_tec_hired_entertainer_add = @b1_jobs
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_capitalism = yes
+			}
+		}
+		text = job_tec_hired_entertainer_effect_desc
+	}
+
+}

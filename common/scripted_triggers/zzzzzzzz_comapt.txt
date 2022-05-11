@@ -1,0 +1,7 @@
+tec_invalidates_ecoworld_project_comp = {
+	OR = {
+		uses_district_set = city_world
+		# Planetary diversity compatibility
+		tec_is_pd_city_planet = yes
+	}
+}

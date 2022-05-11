@@ -1,0 +1,9 @@
+uses_district_industrial = {
+    OR = {
+        uses_district_set = standard
+        uses_district_set = hive_world
+        uses_district_set = machine_world
+        uses_district_set = giga_planet
+        uses_district_set = shattered_ring_world
+    }
+}

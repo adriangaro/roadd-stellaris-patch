@@ -1,0 +1,1550 @@
+planet_miners = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_hired_miners
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_miner
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_miners
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_miner
+		}
+	}
+}
+
+
+planet_farmers = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_hired_farmers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_farmer
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_farmers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_farmer
+		}
+	}
+}
+
+planet_technician = {
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	
+	triggered_produces_modifier = {
+		key = planet_hired_technician
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_technician
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_technician
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_technician
+		}
+	}
+}
+
+planet_soldiers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	triggered_produces_modifier = {
+		key = planet_hired_soldiers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_soldier
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_soldiers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_soldier
+		}
+	}
+}
+
+planet_metallurgists = {
+	icon = "job_foundry"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	triggered_produces_modifier = {
+		key = planet_hired_metallurgists
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_foundry
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_metallurgists
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_foundry
+		}
+	}
+}
+
+planet_artisans = {
+	icon = "job_artisan"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	triggered_produces_modifier = {
+		key = planet_hired_artisans
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_artisan
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_artisans
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_artisan
+		}
+	}
+}
+
+planet_researchers = {
+	icon = "job_researcher"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	triggered_produces_modifier = {
+		key = planet_hired_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_researcher
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_researchers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_researcher
+		}
+	}
+}
+
+planet_entertainers = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+
+	triggered_produces_modifier = {
+		key = planet_hired_entertainers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_entertainer
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_hired_entertainers
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			has_job = tec_hired_entertainer
+		}
+	}
+}
+
+
+planet_jobs = {
+	parent = planets
+	generate_mult_modifiers = {
+		cost
+		upkeep
+		produces
+	}
+	generate_add_modifiers = {
+		cost
+		upkeep
+		produces
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			has_job_category = worker
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			has_job_category = worker
+		}
+	}
+	triggered_produces_modifier = {
+		key = habitat_jobs
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_habitat = yes
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = habitat_jobs
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_habitat = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = non_artificial_planet_jobs
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				is_artificial = no
+				tec_is_habitat = no
+				tec_is_viable_voidwellerneutral_planet = no
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = non_artificial_planet_jobs
+		modifier_types = {
+			add
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				is_artificial = no
+				tec_is_habitat = no
+				tec_is_viable_voidwellerneutral_planet = no
+			}
+		}
+	}
+		# LIFEAFFINITY
+		triggered_produces_modifier = {
+			key = gaia_planet_jobs
+			modifier_types = {
+				mult
+			}
+			trigger = {
+				exists = planet
+				planet = { 
+					is_planet_class = pc_gaia
+				}
+			}
+		}
+		triggered_upkeep_modifier = {
+			key = gaia_planet_jobs
+			modifier_types = {
+				mult
+			}
+			trigger = {
+				exists = planet
+				planet = { 
+					is_planet_class = pc_gaia
+				}
+			}
+		}	
+	triggered_produces_modifier = {
+		key = planet_jobs_latent_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_trait = trait_latent_psionic
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_latent_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_trait = trait_latent_psionic
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_any_psionic_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_any_psionic_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+		}
+	}
+
+    triggered_produces_modifier = { #use this one if deliberately excluding worker drones
+		key = planet_jobs_worker_only
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave # Yes, slave should count towards both worker and slave
+					has_job_category = worker
+				}
+			}
+		}
+	}
+
+    triggered_upkeep_modifier = { #use this one if deliberately excluding worker drones
+		key = planet_jobs_worker_only
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave # Yes, slave should count towards both worker and slave
+					has_job_category = worker
+				}
+			}
+		}
+	}
+
+	triggered_produces_modifier = {
+		key = planet_jobs_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+			}
+		}
+	}
+    triggered_produces_modifier = { #use this one if deliberately excluding complex drones
+		key = planet_jobs_specialist_only
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			OR = {
+				is_pop_category = specialist
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+			}
+		}
+	}
+    triggered_upkeep_modifier = { #use this one if deliberately excluding complex drones
+		key = planet_jobs_specialist_only
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			OR = {
+				is_pop_category = specialist
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+		}
+	}
+    triggered_upkeep_modifier = {
+		key = planet_jobs_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_bioservant
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_bioservant = yes
+		}
+	}
+
+    triggered_upkeep_modifier = {
+		key = planet_jobs_bioservant
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_bioservant = yes
+		}
+	}
+
+	triggered_produces_modifier = {
+		key = planet_jobs_replicant
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_replicant = yes
+		}
+	}
+    triggered_upkeep_modifier = {
+		key = planet_jobs_replicant
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			tec_is_replicant = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_energyentity
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop = yes
+		}
+	}
+    triggered_upkeep_modifier = {
+		key = planet_jobs_energyentity
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_latent_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_latent_psionic
+				}
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_latent_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_latent_psionic
+				}
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				tec_is_any_psionic_pop = yes
+			}
+		}
+	}
+    triggered_upkeep_modifier = {
+		key = planet_jobs_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				tec_is_any_psionic_pop = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop = no
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_tec_purelinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_tec_pure_embroided
+				}
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_tec_purelinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_tec_pure_embroided
+				}
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_cyberlinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_cyberlinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_cybernetics
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+					OR = {
+					tec_is_cyborg_pop = yes
+					is_robotic = yes
+				}
+			}
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_jobs_cybernetics
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					tec_is_cyborg_pop = yes
+					is_robotic = yes
+				}
+			}
+		}
+	}
+	# Used for both robots and synths
+	triggered_produces_modifier = {
+		key = planet_jobs_tec_cyberorganism
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					is_robotic = yes
+					tec_is_cyborg_pop = yes
+				}
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_tec_cyberorganism
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					is_robotic = yes
+					tec_is_cyborg_pop = yes
+				}
+			}
+			
+		}
+	}
+
+	# Specific for cybernetic ap
+	triggered_produces_modifier = {
+		key = planet_jobs_tec_cyberlinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = no
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = planet_jobs_tec_cyberlinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = no
+		}
+	}
+
+	# Specific for pure of form
+	triggered_produces_modifier = {
+		key = planet_jobs_tec_purelinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_tec_pure_embroided
+				}
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_tec_purelinked
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			species = {
+				OR = {
+					has_trait = trait_tec_pure_embroided
+				}
+			}
+		}
+	}
+	# triggered_produces_modifier = {
+	# 	key = planet_jobs_tec_calm
+	# 	modifier_types = {
+	# 		mult
+	# 		add
+	# 	}
+	# 	trigger = {
+	# 		species = {
+	# 			has_trait = trait_tec_pure_calm
+	# 		}
+	# 	}
+	# }
+	# triggered_upkeep_modifier = {
+	# 	key = planet_jobs_tec_calm
+	# 	modifier_types = {
+	# 		mult
+	# 		add
+	# 	}
+	# 	trigger = {
+	# 		species = {
+	# 			has_trait = trait_tec_pure_calm
+	# 		}
+	# 	}
+	# }
+	triggered_produces_modifier = {
+		key = planet_jobs_tec_converged
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_modifier = tec_converged_pop
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_tec_converged
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			has_modifier = tec_converged_pop
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_robot_pop = yes
+				# Evolved
+				tec_is_replicant = yes
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			
+            OR = {
+				is_robot_pop = yes
+				# Evolved
+				tec_is_replicant = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = habitat_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_habitat = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = artificial_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				is_artificial = yes
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = artificial_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				is_artificial = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = perfect_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_viable_lifegood_planet = yes
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = perfect_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_viable_lifegood_planet = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = non_perfect_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_viable_lifegood_planet = no
+				tec_is_viable_lifeneutral_planet = no
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = non_perfect_planet_jobs
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				tec_is_viable_lifegood_planet = no
+				tec_is_viable_lifeneutral_planet = no
+			}
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_slave
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = slave
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_worker
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = worker
+				AND = {
+					is_pop_category = slave
+					has_job_category = worker
+				}
+				is_pop_category = simple_drone
+			}
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+                is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+            }
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+                is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+            }
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+                is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+            }
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_specialist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+                is_pop_category = specialist
+				is_pop_category = complex_drone				#should use planet_jobs_complex_drone wherever possible, this is just for cases like species traits
+				# Evolved
+				is_pop_category = tec_hedonists
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+				is_pop_category = tec_free_agent
+				AND = {
+					is_pop_category = slave
+					has_job_category = specialist
+				}
+            }
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_ruler
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = ruler
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_simple_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_pop_category = simple_drone
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_organic_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+			is_robot_pop = no
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_organic_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+			is_robot_pop = no
+		}
+	}
+	triggered_produces_modifier = {
+		key = planet_jobs_robotic_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+			is_robot_pop = yes
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = planet_jobs_robotic_complex_drone
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			OR = {
+				is_pop_category = complex_drone
+				is_pop_category = tec_brood_drone
+				is_pop_category = tec_prime_drone
+			}
+			is_robot_pop = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = hfe_planet_jobs_psionic
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			hfe_trigger_is_psionic = yes
+		}
+	}
+	triggered_produces_modifier = {
+		key = hfe_planet_jobs_war
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			exists = owner
+			owner = {
+				is_at_war = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = hfe_planet_jobs_war_militarist
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			exists = owner
+			owner = {
+				has_ethic = ethic_militarist
+				is_at_war = yes
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = hfe_planet_jobs_ocean
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				is_planet_class = pc_ocean
+			}
+		}
+	}
+	triggered_produces_modifier = {
+		key = hfe_planet_jobs_non_ocean
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			exists = planet
+			planet = {
+				not = {
+					is_planet_class = pc_ocean
+				}
+			}
+		}
+	}
+
+	######### NEW PRIVATE HIRED JOBS
+
+	triggered_produces_modifier = {
+        key = planet_jobs_hired
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            tec_has_hired_job = yes
+        }
+    }
+    
+    triggered_upkeep_modifier = {
+        key = planet_jobs_hired
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            tec_has_hired_job = yes
+        }
+    }
+}

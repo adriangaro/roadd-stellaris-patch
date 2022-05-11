@@ -1,0 +1,28 @@
+namespace = roadd_lost_paradise
+
+event = {
+	id = roadd_lost_paradise.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_gpm_fallen_empire_colony 
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				species = {
+					NOT = { has_trait = trait_gpm_high_status }
+				}
+				is_sapient = yes
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_gpm_high_status
+				add_traits_at_start_of_list = yes
+				change_scoped_species = yes
+			}
+		}
+	}
+}

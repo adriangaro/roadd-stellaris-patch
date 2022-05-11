@@ -1,0 +1,200 @@
+set_first_contact_starting_stage = {
+    if = {
+        limit = {
+            contact_country = {
+                is_country_type = dragon_dummy
+            }
+        }
+        custom_tooltip = start_dragon_communications_study
+    }
+    else = {
+        custom_tooltip = start_first_contact
+    }
+    hidden_effect = {
+        owner = {
+            set_timed_country_flag = {
+                flag = recent_first_contact_process_started
+                years = 20
+            }
+        }
+        if = {
+            limit = {
+                contact_country = {
+                    tec_is_default_country = yes
+                }
+            }
+            set_first_contact_stage = default_stage_1
+        }
+        else = {
+            contact_country = {
+                switch = {
+                    trigger = is_country_type
+                    enclave = {
+                        setup_first_contact_path = {
+                            TYPE = enclave
+                        }
+                        country_event = {
+                            id = ne_leviathans.97
+                            days = 720
+                            random = 360
+							scopes = {
+								from = root.owner
+							}
+                        }
+                    }
+					ne_enclave = {
+						setup_first_contact_path = {
+                            TYPE = enclave
+                        }
+                        country_event = {
+                            id = ne.13
+                            days = 720
+                            random = 360
+							scopes = {
+								from = root.owner
+							}
+                        }
+					}
+                    tiyanki = {
+                        setup_first_contact_path = {
+                            TYPE = tiyanki
+                        }
+                    }
+                    tiyanki_garrison = {
+                        setup_first_contact_path = {
+                            TYPE = tiyanki
+                        }
+                    }
+                    amoeba = {
+                        setup_first_contact_path = {
+                            TYPE = amoeba
+                        }
+                    }
+                    amoeba_borderless = {
+                        setup_first_contact_path = {
+                            TYPE = amoeba
+                        }
+                    }
+                    amoeba_garrison = {
+                        setup_first_contact_path = {
+                            TYPE = amoeba
+                        }
+                    }
+                    amoeba_faction = {
+                        setup_first_contact_path = {
+                            TYPE = amoeba
+                        }
+                    }
+                    crystal = {
+                        setup_first_contact_path = {
+                            TYPE = crystals
+                        }
+                    }
+                    crystal_faction = {
+                        setup_first_contact_path = {
+                            TYPE = crystals
+                        }
+                    }
+                    drone = {
+                        setup_first_contact_path = {
+                            TYPE = drones
+                        }
+                    }
+                    drone_faction = {
+                        setup_first_contact_path = {
+                            TYPE = drones
+                        }
+                    }
+                    dormant_marauders = {
+                        setup_first_contact_path = {
+                            TYPE = marauders
+                        }
+                    }
+                    pirate = {
+                        setup_first_contact_path = {
+                            TYPE = pirates
+                        }
+                    }
+                    neutral_faction = {
+                        setup_first_contact_path = {
+                            TYPE = pirates
+                        }
+                    }
+                    caravaneer_fleet = {
+                        setup_first_contact_path = {
+                            TYPE = caravaneers
+                        }
+                        if = {
+                            limit = {
+                                exists = event_target:caravaneer_fleet1_country
+                                is_same_value = event_target:caravaneer_fleet1_country
+                            }
+                            root.owner = {
+                                country_event = {
+                                    id = cara.1020
+                                    days = 720
+                                    random = 360
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                exists = event_target:caravaneer_fleet2_country
+                                is_same_value = event_target:caravaneer_fleet2_country
+                            }
+                            root.owner = {
+                                country_event = {
+                                    id = cara.2020
+                                    days = 720
+                                    random = 360
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                exists = event_target:caravaneer_fleet3_country
+                                is_same_value = event_target:caravaneer_fleet3_country
+                            }
+                            root.owner = {
+                                country_event = {
+                                    id = cara.3020
+                                    days = 720
+                                    random = 360
+                                }
+                            }
+                        }
+                    }
+                    caravaneer_home = {
+                        setup_first_contact_path = {
+                            TYPE = caravaneers
+                        }
+                    }
+                    cloud = {
+                        setup_first_contact_path = {
+                            TYPE = void_clouds
+                        }
+                    }
+                    nomad = {
+                        setup_first_contact_path = {
+                            TYPE = nomad
+                        }
+                    }
+
+					dragon_dummy = {
+                        setup_first_contact_path = {
+                            TYPE = origin_dragon
+                        }
+                    }
+					
+                    default = {
+                        root = {
+                            fire_on_action = {
+                                on_action = on_first_contact_stage_1_no_path
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

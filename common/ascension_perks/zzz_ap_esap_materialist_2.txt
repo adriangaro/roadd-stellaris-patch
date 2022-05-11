@@ -1,0 +1,192 @@
+ap_esap_materialist_2 = {
+	possible = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}
+
+# Modified in ESAP (replaced with govermental perk).
+ap_transcendent_learning = {
+	potential = { always = no }
+}
+
+ap_imperial_prerogative = {
+	potential = { always = no }
+}
+
+ap_executive_vigor = {
+	potential = { always = no }
+}
+
+ap_esap_one_purpose = {
+	potential = { always = no }
+}
+
+ap_esap_bio_cyber_psi_2_plain = {
+    possible = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}
+
+ap_esap_bio_cyber_psi_1_plain = {
+    possible = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}
+
+ap_esap_bio_cyber_psi_2 = {
+    possible = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}
+
+ap_esap_bio_cyber_psi_1 = {
+    possible = {
+        always = no
+    }
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}
+
+
+ap_esap_gov_1 = {	
+	on_enabled = {
+		custom_tooltip = ap_esap_gov_1_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_perk_count value = 0 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_1_1" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_perk_count value = 1 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_1_1" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_perk_count value = 2 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_1_2" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_perk_count value = 3 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_1_3" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_perk_count value = 4 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_1_4" days = -1 }
+			}
+			country_event = {
+				id = esap_gov.1
+			}
+		}	
+	}
+
+	modifier = {
+		country_edict_fund_add = 100
+        edicts_upkeep_mult = -0.1
+	}
+
+	potential = {
+		NOT = {
+			has_ethic = ethic_gestalt_consciousness
+			has_ascension_perk = ap_executive_vigor
+			has_ascension_perk = ap_esap_gov_1
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+ap_esap_gov_GC_1 = {	
+	on_enabled = {
+		custom_tooltip = ap_esap_gov_GC_1_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_GC_perk_count value = 0 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_GC_1_1" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_GC_perk_count value = 1 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_GC_1_1" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_GC_perk_count value = 2 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_GC_1_2" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_GC_perk_count value = 3 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_GC_1_3" days = -1 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = var_esap_goverment_GC_perk_count value = 4 }
+				}
+				add_modifier = {modifier = "mod_esap_gov_GC_1_4" days = -1 }
+			}
+			country_event = {
+				id = esap_gov.2
+			}
+		}	
+	}
+
+	modifier = {
+		country_edict_fund_add = 100
+        edicts_upkeep_mult = -0.1
+	}
+
+	potential = {
+		has_ethic = ethic_gestalt_consciousness
+		NOT = {
+			has_ascension_perk = ap_executive_vigor
+			has_ascension_perk = ap_esap_gov_GC_1
+		}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
